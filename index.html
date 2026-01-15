@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Booth – Lindungi Alam</title>
+
+<style>
+:root{
+    --green-light:#4CAF50;
+    --green-dark:#1B5E20;
+    --bg:#f4fdf6;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:#333;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:linear-gradient(90deg,var(--green-dark),var(--green-light));
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+nav h1{
+    color:white;
+    font-size:22px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* ===== HOME (DIUBAH JADI ABU-ABU TERANG) ===== */
+header{
+    height:100vh;
+    background:#eeeeee; /* <<< INI SAJA YANG DIGANTI */
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#333;
+    padding:20px;
+}
+
+header h2{
+    font-size:42px;
+    margin-bottom:15px;
+    animation:fadeDown 1s ease;
+}
+
+header p{
+    max-width:700px;
+    font-size:18px;
+    opacity:0.95;
+}
+
+@keyframes fadeDown{
+    from{opacity:0; transform:translateY(-20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* ===== SECTION ===== */
+section{
+    padding:90px 10%;
+}
+
+section h3{
+    font-size:30px;
+    margin-bottom:20px;
+    color:var(--green-dark);
+}
+
+/* ===== CARD GRID ===== */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:14px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:transform 0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* ===== FOTO ===== */
+.foto{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:12px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:var(--green-dark);
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Photo Booth Tema Lindungi Alam Melalui Menanam Pohon</h1>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#lingkungan">Gambar</a>
+        <a href="#tanaman">Cara Merawat part 1</a>
+        <a href="#sekitar">Cara Merawat part 2</a>
+    </div>
+</nav>
+
+<header id="home">
+    <h2>Photo Booth Proyek Sekolah</h2>
+    <p>
+        Tema proyek ini adalah <b>“Lindungi Alam Melalui Menanam Pohon”</b>.
+        Website ini dibuat untuk gtw lah gw minta saran kalian
+    
+    </p>
+    <br><br>
+    <p>
+        <b>Anggota Kelompok:</b><br>
+        Alexandra • Ramoti • Callysta • Graciella • Nethanea • Leonder • Annabeth
+    </p>
+</header>
+
+<section id="lingkungan">
+    <h3>Contoh Lingkungan</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>Contoh Lingkungan Terawat</h4>
+            <img src="gambar/GAMBAR 1.jpg" alt="Contoh Lingkungan Terawat" class="foto">
+            <p>
+                Lingkungan terawat adalah lingkungan yang bersih, hijau,
+                banyak pohon, udara segar, dan tidak ada sampah berserakan.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>Contoh Lingkungan Tidak Terawat</h4>
+            <img src="gambar/GAMBAR 2.jpg" alt="Contoh Lingkungan Tidak Terawat" class="foto">
+            <p>
+                Lingkungan tidak terawat biasanya dipenuhi sampah,
+                dan dapat menyebabkan banjir.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="tanaman">
+    <h3>Cara Merawat Tanaman dan Pohon dengan Benar</h3>
+    <div class="grid">
+        <div class="card">Menyiram tanaman secara rutin, terutama pagi dan sore hari.</div>
+        <div class="card">Memberikan pupuk alami agar tanaman tumbuh subur.</div>
+        <div class="card">Menanam pohon di tempat yang cukup sinar matahari.</div>
+        <div class="card">Tidak merusak batang, daun, atau akar tanaman.</div>
+        <div class="card">Membersihkan rumput liar di sekitar tanaman.</div>
+        <div class="card">Menjaga tanah tetap gembur(lembut) agar air mudah meresap.</div>
+        <div class="card">Melindungi tanaman dari hama dengan cara alami(Menggunakan air bawang putih).</div>
+    </div>
+</section>
+
+<section id="sekitar">
+    <h3>Cara Merawat Lingkungan Sekitar</h3>
+    <div class="grid">
+        <div class="card">Membuang sampah pada tempatnya.</div>
+        <div class="card">Mengurangi penggunaan plastik sekali pakai.</div>
+        <div class="card">Menanam dan merawat pohon di sekitar rumah.</div>
+        <div class="card">Membersihkan selokan agar tidak tersumbat.</div>
+        <div class="card">Menghemat air dan listrik.</div>
+        <div class="card">Ikut kerja bakti membersihkan lingkungan.</div>
+        <div class="card">Tidak membakar sampah sembarangan.</div>
+    </div>
+</section>
+
+<footer>
+    P ini taruh apaan y gw bingung
+</footer>
+
+</body>
+</html>
